@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <title>משחק הזיכרון של אופיר</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>משחק הזיכרון של אופיר</h1>
+    <div class="controls">
+        <button onclick="createBoard(4,4)">לוח 4x4</button>
+        <button onclick="createBoard(6,6)">לוח 6x6</button>
+        <button onclick="createBoard(8,8)">לוח 8x8</button>
+        <button onclick="resetGame()">התחל מחדש</button>
+        <select id="category-select">
+            <option value="random">רנדומלי</option>
+            <option value="characters">הארי פוטר</option>
+            <option value="dogs">כלבים</option>
+            <option value="cats">חתולים</option>
+        </select>
+    </div>
+    <div class="steps">
+        בחירות נכונות: <span id="goodSteps">0</span> |
+        בחירות שגויות: <span id="badSteps">0</span>
+    </div>
+    <div class="game-board" id="game-board"></div>
+    <div class="overlay" id="finished-overlay">
+        כל הכבוד! סיימת את המשחק!
+        <button onclick="resetGame()">התחל מחדש</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
